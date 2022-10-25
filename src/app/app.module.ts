@@ -11,7 +11,7 @@ import { TaskListModule } from './task-list/task-list.module';
     BrowserModule,
     AppRoutingModule,
     TaskListModule,
-    CalendarModule
+    CalendarModule,
   ],
   declarations: [	AppComponent],
   providers: [],
