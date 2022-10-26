@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TaskListComponent } from './task-list.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FormsModule } from '@angular/forms';
+
+import { TaskListComponent } from './task-list.component';
+import {TaskService} from './task.service';
 
 @NgModule({
   imports: [
@@ -10,6 +12,7 @@ import { FormsModule } from '@angular/forms';
     MatDatepickerModule,
     FormsModule
   ],
+  providers: [TaskService],
   declarations: [TaskListComponent],
   exports: [TaskListComponent]
 })

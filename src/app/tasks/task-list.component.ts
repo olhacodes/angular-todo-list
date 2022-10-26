@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {NgForm} from '@angular/forms';
+import { NgForm } from '@angular/forms';
+
 import { TaskItem } from './task.dto';
 import { NewTask } from './newTask.dto';
 import { TaskService } from './task.service';
@@ -8,14 +9,14 @@ import { TaskService } from './task.service';
 @Component({
   selector: 'task-list',
   templateUrl: './task-list.component.html',
-  styleUrls: ['./task-list.component.css']
+  styleUrls: ['./task-list.component.css'],
 })
 export class TaskListComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
     private taskService: TaskService
-  ) { }
+  ) { } 
 
   tasks = this.taskService.getAllTasks();
 

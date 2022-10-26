@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
+
 import { TaskItem } from './task.dto';
 import {NewTask} from './newTask.dto';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class TaskService {
 
   constructor() { }
