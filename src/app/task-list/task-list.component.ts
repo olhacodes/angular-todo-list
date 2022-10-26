@@ -31,10 +31,6 @@ export class TaskListComponent implements OnInit {
       return
     }
 
-    if (taskNgForm.valid === false) { 
-      return
-    }
-    
     this.tasks.push(new Task(this.newTaskTitle))
     taskNgForm.reset({date: this.date})
   }
