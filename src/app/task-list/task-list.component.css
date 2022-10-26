@@ -75,7 +75,7 @@
     list-style-type: none;
     margin: auto;
     width: 100%;
-    padding: 0%;
+    padding-top: 5%;
   }
 
   tr {
@@ -110,4 +110,9 @@
 
   .is-done {
     text-decoration: line-through;
+  }
+
+  .error-message {
+    color: rgb(246, 29, 29);
+    margin-top: -10px;
   }
