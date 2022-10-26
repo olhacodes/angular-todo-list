@@ -1,3 +1,9 @@
+<div class="todo-list">
+  <div class="input-group">
+    <input [matDatepicker]="picker" [value]="date">
+    <mat-datepicker-toggle class="input" [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker class="input" #picker></mat-datepicker>
+  </div>
 <div class="input-group">
   <input type="text" placeholder="todo" #newTask>
   <button (click)="add(newTask.value)" class="add-button">+</button>
@@ -15,3 +21,4 @@
     </td>
   </tr>
 </table>
+</div>
