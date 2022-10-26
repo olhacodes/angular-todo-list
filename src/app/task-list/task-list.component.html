@@ -1,13 +1,15 @@
 <div class="todo-list">
-  <div class="input-group">
-    <input [matDatepicker]="picker" [(ngModel)]="date">
-    <mat-datepicker-toggle class="input" [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker class="input" #picker></mat-datepicker>
-  </div>
-<div class="input-group">
-  <input type="text" placeholder="todo" [(ngModel)]="newTaskTitle">
-  <button (click)="add()" class="add-button">+</button>
-</div>
+  <form (ngSubmit)="add(taskNgForm)" #taskNgForm="ngForm">
+    <div class="input-group">
+      <input name="date" [matDatepicker]="picker" [(ngModel)]="date">
+      <mat-datepicker-toggle class="input" [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker class="input" #picker></mat-datepicker>
+    </div>
+    <div class="input-group">
+      <input name="task-title" type="text" placeholder="todo" [(ngModel)]="newTaskTitle">
+      <button class="add-button">+</button>
+    </div>
+</form>
 <table>
   <tr *ngFor="let task of tasks; let i = index" [class.even]="i%2==0" [class.odd]="i%2">
     <td>
