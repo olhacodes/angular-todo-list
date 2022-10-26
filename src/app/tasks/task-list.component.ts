@@ -31,6 +31,7 @@ export class TaskListComponent implements OnInit {
     if (taskNgForm.touched === false) {
       return
     }
+    
     this.taskService.addTask(this.newTask)
     taskNgForm.reset({date: this.newTask.date})
   }
